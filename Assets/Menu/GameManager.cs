@@ -21,9 +21,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
     }
 
 	public void StartGame()
@@ -41,6 +41,12 @@ public class GameManager : MonoBehaviour
 		loadedScenes.Add(sceneName);
     }
 
+    public void ChangeLevel(string sceneName)
+    {
+        ExitLevel();
+        LoadScene(sceneName);
+    }
+
 	public void ExitLevel()
 	{
 		foreach (var scene in loadedScenes)
@@ -49,7 +55,6 @@ public class GameManager : MonoBehaviour
         }
         loadedScenes.Clear();
 		UiManager.Instance.ShowMainMenu();
-
 	}
 
     public void UnloadScene(string sceneName)
