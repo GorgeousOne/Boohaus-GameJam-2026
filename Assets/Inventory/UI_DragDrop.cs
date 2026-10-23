@@ -25,6 +25,7 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
         canvasGroup.blocksRaycasts = false;
     }
 
+    //move item by mouse move drag movement
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;

@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 	public void StartGame()
 	{
 		IsGameRunning = true;
-		LoadScene("Level_1");
+		LoadScene("Dressing Room");
 		UiManager.Instance.HideStartScreen();
 	}
 
