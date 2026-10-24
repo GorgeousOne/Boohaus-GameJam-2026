@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
@@ -8,11 +9,18 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
     private Canvas canvas;
     private CanvasGroup canvasGroup;
 
+    ItemType itemType;
+
+
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
+
+        // display item
+        Image sprite = GetComponent<Image>();
+        sprite.sprite = itemType.sprite;
     }
 
     public void OnPointerDown(PointerEventData eventData)

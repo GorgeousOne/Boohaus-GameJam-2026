@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f157d1307e4f0eb4bb10d9198896b39e, type: 3}
   m_Name: Example
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
-  title: Example
-  sprite: {fileID: 0}
+  part: 0
+  sprite: {fileID: 21300000, guid: fd45c848824a7554aa13511941123ff3, type: 3}
