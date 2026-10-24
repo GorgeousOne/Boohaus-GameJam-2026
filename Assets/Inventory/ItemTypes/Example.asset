@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Example
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
   part: 0
-  sprite: {fileID: 21300000, guid: fd45c848824a7554aa13511941123ff3, type: 3}
+  icon: {fileID: 21300000, guid: fd45c848824a7554aa13511941123ff3, type: 3}
+  fullImg: {fileID: 21300000, guid: fc18ddf716c8bdc40816cbae4875081b, type: 3}
+  tags: 

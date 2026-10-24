@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_Inventory : MonoBehaviour
 {
@@ -9,21 +10,39 @@ public class UI_Inventory : MonoBehaviour
     [SerializeField] int slotsPerRow = 5;
     [SerializeField] int slotSize = 200;
 
-
     [SerializeField] GameObject slotPrefab;
+    [SerializeField] List<ItemList> itemLists;
+
+
     private Transform slotContainer;
     private Transform tabContainer;
 
-    [SerializeField] List<ItemList> itemLists;
+    private Transform costumeView;
+    Dictionary<BodyPart, Image> costumeSprites = new();
+    private UI_ItemSlot equipper;
+    Dictionary<BodyPart, ItemType> equippedItems = new();
+
 
     Dictionary<BodyPart, List<UI_ItemSpawn>> slotLists = new();
     List<UI_ItemSpawn> currentSlots = new();
+
 
     void Awake()
     {
         slotContainer = transform.Find("Slot Container");
         tabContainer = transform.Find("Tab Bar");
+        costumeView = transform.Find("Costume View");
+        equipper = costumeView.Find("Equip Slot").GetComponent<UI_ItemSlot>();
 
+        equipper.OnItemEquip.AddListener(OnItemEquip);
+        costumeSprites.Add(BodyPart.PANTS, costumeView.Find("Pants").GetComponent<Image>());
+        costumeSprites.Add(BodyPart.SHIRT, costumeView.Find("Shirt").GetComponent<Image>());
+        costumeSprites.Add(BodyPart.FACE, costumeView.Find("Face").GetComponent<Image>());
+        costumeSprites.Add(BodyPart.HAT, costumeView.Find("Hat").GetComponent<Image>());
+
+        clearEquipped();
+
+        //create slots & items
         foreach (Transform tabTransform in tabContainer.transform)
         {
             ItemList items = tabTransform.GetComponent<ItemList>();
@@ -36,6 +55,15 @@ public class UI_Inventory : MonoBehaviour
             spawnItems(items);
         }
         ShowTab(BodyPart.HAT);
+    }
+
+    void clearEquipped()
+    {
+        foreach (Image img in costumeSprites.Values)
+        {
+            img.sprite = null;
+            img.color = new Color(0, 0, 0, 0);
+        }
     }
 
     // //idk spawn items on top of all spawners, for ordering idl
@@ -88,24 +116,29 @@ public class UI_Inventory : MonoBehaviour
         }
     }
 
-    // public void ShowItems()
-    // {
-    //     slotContainer = transform.Find("Slot Container");
 
-    //     // //create example 2x2 slots
-    //     for (int y = 0; y < 2; ++y)
-    //     {
-    //         for (int x = 0; x < 2; ++x)
-    //         {
-    //             GameObject slotObj = Instantiate(slotPrefab, slotContainer);
-    //             slots.Add(slotObj.GetComponent<UI_ItemSlot>());
+    UI_ItemSpawn getSlotByItem(ItemType item)
+    {
+        foreach(UI_ItemSpawn child in slotLists[item.part])
+        {
+            if (child.type == item)
+            {
+                return child;
+            }
+        }
+        return null;
+    }
 
-    //             RectTransform slotRect = slotObj.GetComponent<RectTransform>();
+    public void OnItemEquip(ItemType item)
+    {
+        Debug.Log("equpi " + item.part);
+        ItemType oldItem = equippedItems.GetValueOrDefault(item.part, null);
 
-    //             slotRect.anchoredPosition = new Vector2(
-    //                 (x+0.5f) * slotRect.rect.width,
-    //                 -(y+0.5f) * slotRect.rect.height);
-    //         }
-    //     }
-    // }
+        if (oldItem) {
+            UI_ItemSpawn slot = getSlotByItem(oldItem);
+            // slot.setgrayout false
+        }
+        costumeSprites[item.part].sprite = item.fullImg;
+        costumeSprites[item.part].color = Color.white;
+    }
 }

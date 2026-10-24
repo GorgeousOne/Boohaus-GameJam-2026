@@ -1,5 +1,5 @@
 
 public enum BodyPart {
 
-    HAT, FACE, CHEST, LEGS
+    HAT, FACE, SHIRT, PANTS
 }

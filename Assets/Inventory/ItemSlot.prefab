@@ -88,3 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d794d31a0c52964d98407220cb544ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_ItemSlot
+  OnItemEquip:
+    m_PersistentCalls:
+      m_Calls: []

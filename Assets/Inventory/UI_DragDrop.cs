@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -9,7 +10,11 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
     private Canvas canvas;
     private CanvasGroup canvasGroup;
 
-    [SerializeField] ItemType itemType;
+    public UnityEvent OnDropEvent;
+
+    private bool checkIfEquippedNextFrame;
+
+    [SerializeField] public ItemType itemType;
 
 
     void Awake()
@@ -17,10 +22,9 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
-        Debug.Log("hey " + (rectTransform == null));
         // display item
         Image sprite = GetComponent<Image>();
-        sprite.sprite = itemType.sprite;
+        sprite.sprite = itemType.icon;
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -43,6 +47,16 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = true;
+        checkIfEquippedNextFrame = true;
+
     }
 
+    void Update()
+    {
+        if (checkIfEquippedNextFrame)
+        {
+            OnDropEvent.Invoke();
+            checkIfEquippedNextFrame = false;
+        }
+    }
 }

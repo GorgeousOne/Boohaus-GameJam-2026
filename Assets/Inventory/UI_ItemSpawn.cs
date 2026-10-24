@@ -7,8 +7,9 @@ public class UI_ItemSpawn : MonoBehaviour, IPointerDownHandler, IEndDragHandler
 {
 
     [SerializeField] GameObject itemPrefab;
-    ItemType type;
+    public ItemType type;
     UI_DragDrop currentItem;
+
 
 
     //change the item of the spawner
@@ -16,7 +17,6 @@ public class UI_ItemSpawn : MonoBehaviour, IPointerDownHandler, IEndDragHandler
     {
         this.type = type;
         GameObject item = Instantiate(itemPrefab, transform.parent);
-        Debug.Log(item);
 
         RectTransform itemRect = item.GetComponent<RectTransform>();
         RectTransform ownRect = GetComponent<RectTransform>();
@@ -24,7 +24,7 @@ public class UI_ItemSpawn : MonoBehaviour, IPointerDownHandler, IEndDragHandler
 
 
         currentItem = itemRect.GetComponent<UI_DragDrop>();
-
+        currentItem.OnDropEvent.AddListener(OnItemDrop);
     }
 
     public void hide()
@@ -35,6 +35,7 @@ public class UI_ItemSpawn : MonoBehaviour, IPointerDownHandler, IEndDragHandler
         }
         gameObject.SetActive(false);
     }
+
     public void unhide()
     {
         if (currentItem)
@@ -46,6 +47,14 @@ public class UI_ItemSpawn : MonoBehaviour, IPointerDownHandler, IEndDragHandler
     public void OnPointerDown(PointerEventData eventData)
     {
 
+    }
+
+    void OnItemDrop()
+    {
+        // if armorslots contains item.type => gray out item
+
+        RectTransform itemRect = currentItem.GetComponent<RectTransform>();
+        itemRect.position =  GetComponent<RectTransform>().position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
