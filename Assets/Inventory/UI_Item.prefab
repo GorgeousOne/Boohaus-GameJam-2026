@@ -89,6 +89,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d938d163c1c64b844985efe9f4f49c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_DragDrop
+  OnDropEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  particles: {fileID: 7882182585077883209, guid: 001d08db4711aaa449d0c2270cb0ab3e, type: 3}
   itemType: {fileID: 11400000, guid: 508b3c2528be3f744bc48a12b08420c0, type: 2}
 --- !u!225 &1622522959661414152
 CanvasGroup:
