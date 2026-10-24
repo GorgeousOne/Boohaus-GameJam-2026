@@ -13,6 +13,8 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
     public UnityEvent OnDropEvent;
 
     private bool checkIfEquippedNextFrame;
+    [SerializeField] ParticleSystem particles;
+
 
     [SerializeField] public ItemType itemType;
 
@@ -71,6 +73,11 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
     {
         if (checkIfEquippedNextFrame)
         {
+            Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+            Vector3 viewPos = cam.ScreenToWorldPoint(transform.position);
+            viewPos.z = 0;
+
+            Instantiate(particles, viewPos, Quaternion.identity);
             OnDropEvent.Invoke();
             checkIfEquippedNextFrame = false;
         }
