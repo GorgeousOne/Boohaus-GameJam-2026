@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
 	{
 		IsGameRunning = true;
         LoadScene("Comic");
-		// LoadScene("Dressing Room");
 		UiManager.Instance.HideStartScreen();
 	}
 
