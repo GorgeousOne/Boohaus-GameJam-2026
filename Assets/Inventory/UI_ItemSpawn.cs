@@ -10,8 +10,6 @@ public class UI_ItemSpawn : MonoBehaviour, IPointerDownHandler, IEndDragHandler
     public ItemType type;
     public UI_DragDrop currentItem;
 
-
-
     //change the item of the spawner
     public void SetItemType(ItemType type)
     {
