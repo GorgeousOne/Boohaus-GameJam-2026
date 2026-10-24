@@ -23,8 +23,15 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
         // display item
+        // Image sprite = GetComponent<Image>();
+        // sprite.sprite = itemType.fullImg;
+    }
+
+    public void setItem(ItemType item)
+    {
+        itemType = item;
         Image sprite = GetComponent<Image>();
-        sprite.sprite = itemType.icon;
+        sprite.sprite = itemType.fullImg;
     }
 
     public void OnPointerDown(PointerEventData eventData)

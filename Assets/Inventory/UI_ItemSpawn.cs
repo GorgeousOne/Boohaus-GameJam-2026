@@ -8,15 +8,20 @@ public class UI_ItemSpawn : MonoBehaviour, IPointerDownHandler, IEndDragHandler
 
     [SerializeField] GameObject itemPrefab;
     public ItemType type;
-    UI_DragDrop currentItem;
+    public UI_DragDrop currentItem;
 
 
 
     //change the item of the spawner
     public void SetItemType(ItemType type)
     {
+        if (currentItem != null)
+        {
+            Debug.LogError("dont instantiate item twice");
+        }
         this.type = type;
         GameObject item = Instantiate(itemPrefab, transform.parent);
+        item.GetComponent<UI_DragDrop>().setItem(type);
 
         RectTransform itemRect = item.GetComponent<RectTransform>();
         RectTransform ownRect = GetComponent<RectTransform>();

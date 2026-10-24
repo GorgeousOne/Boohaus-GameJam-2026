@@ -46,6 +46,7 @@ public class UI_Inventory : MonoBehaviour
         foreach (Transform tabTransform in tabContainer.transform)
         {
             ItemList items = tabTransform.GetComponent<ItemList>();
+            items.OnClick.AddListener(onSwitchView);
             createTabLayout(items);
         }
 
@@ -54,7 +55,13 @@ public class UI_Inventory : MonoBehaviour
             ItemList items = tabTransform.GetComponent<ItemList>();
             spawnItems(items);
         }
-        ShowTab(BodyPart.HAT);
+        // ShowTab(BodyPart.HAT);
+    }
+
+    void onSwitchView(BodyPart bodyPart)
+    {
+        Debug.Log("switch to " + bodyPart);
+        ShowTab(bodyPart);
     }
 
     void clearEquipped()
@@ -74,9 +81,12 @@ public class UI_Inventory : MonoBehaviour
 
         foreach (ItemType item in items.itemList)
         {
+            if (!item)
+            {
+                continue;
+            }
             slots[i].SetItemType(item);
             slots[i].hide();
-
             ++i;
         }
     }
@@ -88,6 +98,10 @@ public class UI_Inventory : MonoBehaviour
         int i = 0;
 
         foreach (ItemType item in items.itemList) {
+            if (!item)
+            {
+                continue;
+            }
             // TODO add spacing?
             float x = i % slotsPerRow;
             float y = -i / slotsPerRow;
@@ -97,6 +111,7 @@ public class UI_Inventory : MonoBehaviour
 
             RectTransform transform = slot.GetComponent<RectTransform>();
             transform.anchoredPosition = new Vector2((x+0.5f) * slotSize, (y-0.5f) * slotSize);
+
             slots.Add(slot);
             ++i;
         }
@@ -106,7 +121,7 @@ public class UI_Inventory : MonoBehaviour
     {
         foreach(UI_ItemSpawn slot in currentSlots)
         {
-            slot.gameObject.SetActive(false);
+            slot.hide();
         }
         currentSlots = slotLists[bodyPart];
         foreach(UI_ItemSpawn slot in currentSlots)
@@ -119,7 +134,7 @@ public class UI_Inventory : MonoBehaviour
 
     UI_ItemSpawn getSlotByItem(ItemType item)
     {
-        foreach(UI_ItemSpawn child in slotLists[item.part])
+        foreach(UI_ItemSpawn child in slotLists[item.bodyPart])
         {
             if (child.type == item)
             {
@@ -131,14 +146,14 @@ public class UI_Inventory : MonoBehaviour
 
     public void OnItemEquip(ItemType item)
     {
-        Debug.Log("equpi " + item.part);
-        ItemType oldItem = equippedItems.GetValueOrDefault(item.part, null);
+        Debug.Log("equpi " + item.bodyPart);
+        ItemType oldItem = equippedItems.GetValueOrDefault(item.bodyPart, null);
 
         if (oldItem) {
             UI_ItemSpawn slot = getSlotByItem(oldItem);
             // slot.setgrayout false
         }
-        costumeSprites[item.part].sprite = item.fullImg;
-        costumeSprites[item.part].color = Color.white;
+        costumeSprites[item.bodyPart].sprite = item.fullImg;
+        costumeSprites[item.bodyPart].color = Color.white;
     }
 }

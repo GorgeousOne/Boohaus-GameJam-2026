@@ -5,8 +5,8 @@ using UnityEngine.Serialization;
 [CreateAssetMenu(fileName = "ItemType", menuName = "Items/Item Type")]
 public class ItemType : ScriptableObject
 {
-    public BodyPart part;
-    public Sprite icon;
+    [FormerlySerializedAs("part")]
+    public BodyPart bodyPart;
     public Sprite fullImg;
     public List<CostumeTag> tags;
 }

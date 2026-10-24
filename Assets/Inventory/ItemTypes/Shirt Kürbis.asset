@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f157d1307e4f0eb4bb10d9198896b39e, type: 3}
-  m_Name: Example
+  m_Name: "Shirt K\xFCrbis"
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
-  part: 0
-  icon: {fileID: 21300000, guid: fd45c848824a7554aa13511941123ff3, type: 3}
-  fullImg: {fileID: 21300000, guid: fc18ddf716c8bdc40816cbae4875081b, type: 3}
+  part: 2
+  fullImg: {fileID: 21300000, guid: 57b5de02a9929c04284d2c27c300c82b, type: 3}
   tags: 
