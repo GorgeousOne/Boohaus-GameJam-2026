@@ -43,7 +43,10 @@ public class GameManager : MonoBehaviour
 
     public void ChangeLevel(string sceneName)
     {
-        ExitLevel();
+        foreach (var scene in loadedScenes)
+        {
+            SceneManager.UnloadSceneAsync(scene);
+        }
         LoadScene(sceneName);
     }
 

@@ -151,8 +151,11 @@ public class UI_Inventory : MonoBehaviour
 
         if (oldItem) {
             UI_ItemSpawn slot = getSlotByItem(oldItem);
+            slot.currentItem.SetEquipped(false);
             // slot.setgrayout false
         }
+
+        getSlotByItem(item).currentItem.SetEquipped(true);
         costumeSprites[item.bodyPart].sprite = item.fullImg;
         costumeSprites[item.bodyPart].color = Color.white;
     }

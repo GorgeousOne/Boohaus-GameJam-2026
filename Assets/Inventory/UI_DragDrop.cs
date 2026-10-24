@@ -16,21 +16,26 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
 
     [SerializeField] public ItemType itemType;
 
+    bool isEquipped;
+    Image sprite;
+
+    public void SetEquipped(bool value) {
+        isEquipped = value;
+        sprite.color = value ? new Color(0.51f, 0.20f, 0.92f) : Color.white;
+    }
+
 
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
-        // display item
-        // Image sprite = GetComponent<Image>();
-        // sprite.sprite = itemType.fullImg;
+        sprite = GetComponent<Image>();
     }
 
     public void setItem(ItemType item)
     {
         itemType = item;
-        Image sprite = GetComponent<Image>();
         sprite.sprite = itemType.fullImg;
     }
 
@@ -47,6 +52,11 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
     //move item by mouse move drag movement
     public void OnDrag(PointerEventData eventData)
     {
+        if (isEquipped)
+        {
+            return;
+        }
+
         Vector2 delta = eventData.delta / canvas.scaleFactor;
         rectTransform.anchoredPosition += delta;
     }
@@ -55,7 +65,6 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
     {
         canvasGroup.blocksRaycasts = true;
         checkIfEquippedNextFrame = true;
-
     }
 
     void Update()

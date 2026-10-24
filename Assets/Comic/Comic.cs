@@ -28,7 +28,10 @@ public class Comic : MonoBehaviour
 
     void showNextPanel()
     {
-        if (i == 3){ GameManager.Instance.ChangeLevel("Dressing Room"); };
+        if (i == 3) {
+            GameManager.Instance.ChangeLevel("Dressing Room");
+            return;
+        }
         comic.sprite = panels[i];
         i++;
     }
