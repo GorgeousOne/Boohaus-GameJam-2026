@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 20}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8135728423862963570
 CanvasRenderer:
@@ -88,3 +88,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c5cf104280be3459bc8722d05caf77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_ItemSpawn
+  itemPrefab: {fileID: 9074466134607609563, guid: b917265476e014a4f9923f7b19a298cf, type: 3}

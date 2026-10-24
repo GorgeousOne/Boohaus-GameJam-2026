@@ -10,14 +10,14 @@ public class UI_Inventory : MonoBehaviour
     [SerializeField] int slotSize = 200;
 
 
-    [SerializeField] UI_ItemSpawn slotPrefab;
+    [SerializeField] GameObject slotPrefab;
     private Transform slotContainer;
     private Transform tabContainer;
 
     [SerializeField] List<ItemList> itemLists;
 
     Dictionary<BodyPart, List<UI_ItemSpawn>> slotLists = new();
-    List<UI_ItemSpawn> currentSlots;
+    List<UI_ItemSpawn> currentSlots = new();
 
     void Awake()
     {
@@ -29,7 +29,28 @@ public class UI_Inventory : MonoBehaviour
             ItemList items = tabTransform.GetComponent<ItemList>();
             createTabLayout(items);
         }
+
+        foreach (Transform tabTransform in tabContainer.transform)
+        {
+            ItemList items = tabTransform.GetComponent<ItemList>();
+            spawnItems(items);
+        }
         ShowTab(BodyPart.HAT);
+    }
+
+    // //idk spawn items on top of all spawners, for ordering idl
+    private void spawnItems(ItemList items)
+    {
+        List<UI_ItemSpawn> slots = slotLists[items.bodyPart];
+        int i = 0;
+
+        foreach (ItemType item in items.itemList)
+        {
+            slots[i].SetItemType(item);
+            slots[i].hide();
+
+            ++i;
+        }
     }
 
     private void createTabLayout(ItemList items)
@@ -40,15 +61,14 @@ public class UI_Inventory : MonoBehaviour
 
         foreach (ItemType item in items.itemList) {
             // TODO add spacing?
-            float x = i % slotsPerRow * slotSize;
-            float y = i / slotsPerRow * slotSize;
+            float x = i % slotsPerRow;
+            float y = -i / slotsPerRow;
 
-            UI_ItemSpawn slot = Instantiate(slotPrefab, Vector3.zero, Quaternion.identity);
-            slot.transform.parent = slotContainer;
-            slot.SetItemType(item);
+            GameObject slotObj = Instantiate(slotPrefab, slotContainer);
+            UI_ItemSpawn slot = slotObj.GetComponent<UI_ItemSpawn>();
+
             RectTransform transform = slot.GetComponent<RectTransform>();
-            transform.anchoredPosition = new Vector2((x+0.5f) * slotSize, (x+0.5f) * slotSize);
-            slot.gameObject.SetActive(false);
+            transform.anchoredPosition = new Vector2((x+0.5f) * slotSize, (y-0.5f) * slotSize);
             slots.Add(slot);
             ++i;
         }
@@ -60,9 +80,11 @@ public class UI_Inventory : MonoBehaviour
         {
             slot.gameObject.SetActive(false);
         }
+        currentSlots = slotLists[bodyPart];
         foreach(UI_ItemSpawn slot in currentSlots)
         {
             slot.gameObject.SetActive(true);
+            slot.unhide();
         }
     }
 

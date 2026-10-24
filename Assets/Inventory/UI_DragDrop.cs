@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
@@ -9,7 +9,7 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
     private Canvas canvas;
     private CanvasGroup canvasGroup;
 
-    ItemType itemType;
+    [SerializeField] ItemType itemType;
 
 
     void Awake()
@@ -17,7 +17,7 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
-
+        Debug.Log("hey " + (rectTransform == null));
         // display item
         Image sprite = GetComponent<Image>();
         sprite.sprite = itemType.sprite;
@@ -36,7 +36,8 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
     //move item by mouse move drag movement
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        Vector2 delta = eventData.delta / canvas.scaleFactor;
+        rectTransform.anchoredPosition += delta;
     }
 
     public void OnEndDrag(PointerEventData eventData)
