@@ -8,6 +8,8 @@ public class UI_ItemSlot : MonoBehaviour, IDropHandler
     public UnityEvent<ItemType> OnItemEquip;
     [SerializeField] ParticleSystem[] particles;
 
+    public AudioSource sparkleSound;
+
     // snap anything dropped on this slot
     public void OnDrop(PointerEventData eventData)
     {
@@ -19,6 +21,7 @@ public class UI_ItemSlot : MonoBehaviour, IDropHandler
             OnItemEquip.Invoke(item.itemType);
 
             Instantiate(particles[Random.Range(0, particles.Length)], transform.position, Quaternion.identity);
+            sparkleSound.Play();
         }
     }
 }

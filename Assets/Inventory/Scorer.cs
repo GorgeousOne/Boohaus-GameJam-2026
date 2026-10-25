@@ -20,6 +20,8 @@ public class Scorer : MonoBehaviour
 
     public GameObject continueBtn;
 
+    public AudioSource stoneSound;
+
 
 
     bool startedBonbons;
@@ -55,9 +57,9 @@ public class Scorer : MonoBehaviour
         animStartPoint = character.anchoredPosition;
         bonbonStart = animStart + animDuration + 2;
         Debug.Log(animStart + " " + bonbonStart);
-        var audios = GetComponents<AudioSource>();
-        // stone statue
-        audios[1].Play();
+
+        //stibe sizbd
+        stoneSound.Play();
 
         Debug.Log("" + bonbonStart + Time.time);
         int[] scoreOptions = new int[3];

@@ -43,6 +43,9 @@ public class GameManager : MonoBehaviour
 
     public void ChangeLevel(string sceneName)
     {
+        foreach (AudioSource audio in FindObjectsByType<AudioSource>(FindObjectsSortMode.None)) {
+            audio.Stop();
+        }
         foreach (var scene in loadedScenes)
         {
             SceneManager.UnloadSceneAsync(scene);
