@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shirt Hemd Schwarz
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
   bodyPart: 2
-  fullImg: {fileID: -3915895885948685799, guid: 9869d511b5a498a489eb17b9dcbbc366, type: 3}
+  fullImg: {fileID: 21300000, guid: 9869d511b5a498a489eb17b9dcbbc366, type: 3}
   tags: 

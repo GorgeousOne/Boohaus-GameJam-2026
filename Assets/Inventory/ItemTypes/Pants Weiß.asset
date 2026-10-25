@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: "Pants Wei\xDF"
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
   bodyPart: 3
-  fullImg: {fileID: -9065988160029027665, guid: c3d31434862863e40ac8cda0431e490e, type: 3}
+  fullImg: {fileID: 21300000, guid: c3d31434862863e40ac8cda0431e490e, type: 3}
   tags: 

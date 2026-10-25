@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Pants Vampir
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
   bodyPart: 3
-  fullImg: {fileID: 3517384480256915870, guid: c83a3235f617900478433656b81894d4, type: 3}
+  fullImg: {fileID: 21300000, guid: c83a3235f617900478433656b81894d4, type: 3}
   tags: 

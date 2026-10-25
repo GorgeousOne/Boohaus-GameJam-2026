@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shirt Elefant
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
   bodyPart: 2
-  fullImg: {fileID: -3260001969642347718, guid: c3c6032f74477224896fc13f7040ae27, type: 3}
+  fullImg: {fileID: 21300000, guid: c3c6032f74477224896fc13f7040ae27, type: 3}
   tags: 

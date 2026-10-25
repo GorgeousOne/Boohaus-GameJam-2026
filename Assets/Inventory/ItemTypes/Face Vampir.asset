@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Face Vampir
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
   bodyPart: 1
-  fullImg: {fileID: -8490659267273851090, guid: 5d24a23fc4b77774cb0ec177750361b7, type: 3}
+  fullImg: {fileID: 21300000, guid: 5d24a23fc4b77774cb0ec177750361b7, type: 3}
   tags: 

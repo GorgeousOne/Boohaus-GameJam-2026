@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Pants Wirt
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
   bodyPart: 3
-  fullImg: {fileID: 4671478170941926652, guid: 78f6e98cc8e358649ada9def0f4bafcd, type: 3}
+  fullImg: {fileID: 21300000, guid: 78f6e98cc8e358649ada9def0f4bafcd, type: 3}
   tags: 

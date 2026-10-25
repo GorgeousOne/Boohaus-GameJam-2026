@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shirt Vampir
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
   bodyPart: 2
-  fullImg: {fileID: -7358163597836069540, guid: 3799ed555de25de4d8e9be962c090d75, type: 3}
+  fullImg: {fileID: 21300000, guid: 3799ed555de25de4d8e9be962c090d75, type: 3}
   tags: 

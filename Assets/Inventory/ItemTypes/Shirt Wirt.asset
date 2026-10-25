@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shirt Wirt
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
   bodyPart: 2
-  fullImg: {fileID: -1913164677810008259, guid: 6ae09e1e528835b44839e16fb67b4880, type: 3}
+  fullImg: {fileID: 21300000, guid: 6ae09e1e528835b44839e16fb67b4880, type: 3}
   tags: 

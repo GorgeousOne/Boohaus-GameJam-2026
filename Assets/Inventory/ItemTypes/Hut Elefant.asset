@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Hut Elefant
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
   bodyPart: 0
-  fullImg: {fileID: 2957395447447533700, guid: b8be137913cac344da75a3263f8edc53, type: 3}
+  fullImg: {fileID: 21300000, guid: b8be137913cac344da75a3263f8edc53, type: 3}
   tags: 
