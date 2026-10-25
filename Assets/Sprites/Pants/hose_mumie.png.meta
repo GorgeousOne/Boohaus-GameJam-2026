@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 03581861cb24344498cf7b4b0520002a
+guid: e3e84f4ebea1b5e428c1081b3d6fb468
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1858131981432663160
-    second: hut_engel_0
+      213: -2255880741697213540
+    second: hose_mumie_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,9 +46,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hut_engel_0
+      name: hose_mumie_0
       rect:
         serializedVersion: 2
-        x: 141
-        y: 855
-        width: 208
-        height: 83
+        x: 154
+        y: 21
+        width: 163
+        height: 542
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87c261b313969c910800000000000000
-      internalID: 1858131981432663160
+      spriteID: c9b2e77ea6081b0e0800000000000000
+      internalID: -2255880741697213540
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hut_engel_0: 1858131981432663160
+      hose_mumie_0: -2255880741697213540
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8c6b5d6f4fc6fc24c819f5a5e8803f54
+guid: b93ace2a95b60674fbb736d111a18d6a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7693946256456152023
-    second: hut_zauberer_0
+      213: 333249934934442624
+    second: hose_zauberer_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,9 +46,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hut_zauberer_0
+      name: hose_zauberer_0
       rect:
         serializedVersion: 2
-        x: 170
-        y: 809
-        width: 135
-        height: 129
+        x: 155
+        y: 21
+        width: 163
+        height: 532
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92c0cfed4ac993590800000000000000
-      internalID: -7693946256456152023
+      spriteID: 0828039dc01ff9400800000000000000
+      internalID: 333249934934442624
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hut_zauberer_0: -7693946256456152023
+      hose_zauberer_0: 333249934934442624
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
