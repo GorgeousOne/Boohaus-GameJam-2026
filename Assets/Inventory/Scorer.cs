@@ -47,8 +47,8 @@ public class Scorer : MonoBehaviour
     public void StartScoring()
     {
         DialogueRunner runner = GameObject.FindWithTag("Yarn").GetComponent<DialogueRunner>();
-        runner.StartDialogue("Chat1");
-
+        int chatIdx = Random.Range(1, 5);
+        runner.StartDialogue("Chat" + chatIdx);
 
         front.SetActive(true);
         back.SetActive(true);
