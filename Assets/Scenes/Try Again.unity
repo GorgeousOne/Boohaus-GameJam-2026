@@ -312,9 +312,9 @@ MonoBehaviour:
   comic: {fileID: 234524335}
   frames:
   - {fileID: 21300000, guid: 7097a548191e8834da197234ccf233cb, type: 3}
-  - {fileID: 21300000, guid: 147771afdaf4dc74898776667f809608, type: 3}
+  - {fileID: -256722267084590184, guid: daf88a79e07007b409653b7a6eaee8cc, type: 3}
   - {fileID: 21300000, guid: 3dcef049e9fe4bc418745940e15fca0c, type: 3}
-  - {fileID: 21300000, guid: 8bca5401a3d6ec84e915a473a6012aa3, type: 3}
+  - {fileID: 2437332824937561638, guid: 5e5bd894a9aebca4fa9418b9f43e0cbd, type: 3}
 --- !u!1 &1413025625
 GameObject:
   m_ObjectHideFlags: 0

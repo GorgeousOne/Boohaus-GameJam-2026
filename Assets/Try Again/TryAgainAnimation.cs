@@ -29,7 +29,7 @@ public class TryAgainAnimation : MonoBehaviour
 
             timer -= 1.0f / animationFrameRate;
         };
-        
+
     }
 
     void showNextPanel()

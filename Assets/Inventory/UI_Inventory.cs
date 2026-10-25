@@ -15,7 +15,7 @@ public class UI_Inventory : MonoBehaviour
 
 
     private Transform slotContainer;
-    private Transform tabContainer;
+    // private Transform tabContainer;
 
     private Transform costumeView;
     Dictionary<BodyPart, Image> costumeSprites = new();
@@ -30,10 +30,13 @@ public class UI_Inventory : MonoBehaviour
     void Awake()
     {
         slotContainer = GameObject.Find("Slot Container").transform;
-        tabContainer = GameObject.Find("Tab Bar").transform;
+        // tabContainer = GameObject.Find("Tab Bar").transform;
         costumeView = GameObject.Find("Costume View").transform;
         equipper = GameObject.Find("Equip Slot").GetComponent<UI_ItemSlot>();
-
+        Debug.Log(slotContainer);
+        // Debug.Log(tabContainer);
+        Debug.Log(costumeView);
+        Debug.Log(equipper);
         equipper.OnItemEquip.AddListener(OnItemEquip);
         costumeSprites.Add(BodyPart.PANTS, costumeView.Find("Pants").GetComponent<Image>());
         costumeSprites.Add(BodyPart.SHIRT, costumeView.Find("Shirt").GetComponent<Image>());
@@ -43,16 +46,14 @@ public class UI_Inventory : MonoBehaviour
         clearEquipped();
 
         //create slots & items
-        foreach (Transform tabTransform in tabContainer.transform)
+        foreach (ItemList items in itemLists)
         {
-            ItemList items = tabTransform.GetComponent<ItemList>();
             items.OnClick.AddListener(onSwitchView);
             createTabLayout(items);
         }
 
-        foreach (Transform tabTransform in tabContainer.transform)
+        foreach (ItemList items in itemLists)
         {
-            ItemList items = tabTransform.GetComponent<ItemList>();
             spawnItems(items);
         }
         // ShowTab(BodyPart.HAT);
