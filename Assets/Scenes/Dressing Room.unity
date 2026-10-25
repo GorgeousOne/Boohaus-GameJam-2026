@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 41ff804d5df19af4db99b35f78793add, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bd291ed8e9e42a148b22be000b8a1584, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3445,6 +3445,7 @@ MonoBehaviour:
   - {fileID: 1004707455}
   - {fileID: 41229987}
   clicksound: {fileID: 214615927}
+  defaultFace: {fileID: 11400000, guid: 2aa24d71fdf1e6c4f9eca2d68880df89, type: 2}
 --- !u!224 &4875038272628070327
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3480,7 +3481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2467311866926842175, guid: c5c3e639db1148a4ebf53d383a62ea41, type: 3}
       propertyPath: itemList.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -2467311866926842175, guid: c5c3e639db1148a4ebf53d383a62ea41, type: 3}
       propertyPath: 'itemList.Array.data[0]'
@@ -3505,7 +3506,7 @@ PrefabInstance:
     - target: {fileID: -2467311866926842175, guid: c5c3e639db1148a4ebf53d383a62ea41, type: 3}
       propertyPath: 'itemList.Array.data[5]'
       value: 
-      objectReference: {fileID: 11400000, guid: 514dfd2833b487e498bc2e889cafcc1f, type: 2}
+      objectReference: {fileID: 11400000, guid: 2aa24d71fdf1e6c4f9eca2d68880df89, type: 2}
     - target: {fileID: 1339150801121885082, guid: c5c3e639db1148a4ebf53d383a62ea41, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

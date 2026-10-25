@@ -27,6 +27,7 @@ public class UI_Inventory : MonoBehaviour
     List<UI_ItemSpawn> currentSlots = new();
 
     public AudioSource clicksound;
+    public ItemType defaultFace;
 
 
     void Awake()
@@ -59,6 +60,7 @@ public class UI_Inventory : MonoBehaviour
             spawnItems(items);
         }
         ShowTab(BodyPart.HAT);
+        OnItemEquip(defaultFace);
     }
 
     void onSwitchView(BodyPart bodyPart)
@@ -167,7 +169,7 @@ public class UI_Inventory : MonoBehaviour
         {
             image.sprite = null;
             image.color = new Color(0, 0, 0, 0);
-
         }
+        OnItemEquip(defaultFace);
     }
 }
