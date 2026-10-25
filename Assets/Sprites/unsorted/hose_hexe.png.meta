@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: edef13d1155501f49b459bdfb0d6be68
+guid: c016913e500927b4a89d9ccc27b14207
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7722448472534338545
-    second: hose_hose_schwarz_0
+      213: -4130458711223972824
+    second: hose_hexe_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,9 +46,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hose_hose_schwarz_0
+      name: hose_hexe_0
       rect:
         serializedVersion: 2
-        x: 143
-        y: 15
-        width: 206
-        height: 548
+        x: 106
+        y: 7
+        width: 285
+        height: 550
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1fbcaa178f5ab2b60800000000000000
-      internalID: 7722448472534338545
+      spriteID: 82cc31eafa9ada6c0800000000000000
+      internalID: -4130458711223972824
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hose_hose_schwarz_0: 7722448472534338545
+      hose_hexe_0: -4130458711223972824
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

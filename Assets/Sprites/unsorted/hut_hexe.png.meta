@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 6dff72318b5d5db4ab15284fd69bc385
+guid: 4d1a30d73cb2ee24daffbfe5ac5f2bbf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4671478170941926652
-    second: hose_wirt_0
-  - first:
-      213: -500744477364088096
-    second: hose_wirt_1
-  - first:
-      213: 621733046654841554
-    second: hose_wirt_2
+      213: 3523786773385673318
+    second: hut_hexe_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,9 +46,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -106,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hose_wirt_0
+      name: hut_hexe_0
       rect:
         serializedVersion: 2
-        x: 173
-        y: 111
-        width: 145
-        height: 451
+        x: 132
+        y: 824
+        width: 211
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,52 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cfc2cfa55ac64d040800000000000000
-      internalID: 4671478170941926652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hose_wirt_1
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 21
-        width: 93
-        height: 88
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0e299770d8ffc09f0800000000000000
-      internalID: -500744477364088096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hose_wirt_2
-      rect:
-        serializedVersion: 2
-        x: 242
-        y: 19
-        width: 76
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2d2bbfe69e6d0a800800000000000000
-      internalID: 621733046654841554
+      spriteID: 66a7fdb866107e030800000000000000
+      internalID: 3523786773385673318
       vertices: []
       indices: 
       edges: []
@@ -175,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hose_wirt_0: 4671478170941926652
-      hose_wirt_1: -500744477364088096
-      hose_wirt_2: 621733046654841554
+      hut_hexe_0: 3523786773385673318
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
