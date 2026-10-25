@@ -91,3 +91,5 @@ MonoBehaviour:
   OnItemEquip:
     m_PersistentCalls:
       m_Calls: []
+  particles:
+  - {fileID: 7882182585077883209, guid: 001d08db4711aaa449d0c2270cb0ab3e, type: 3}

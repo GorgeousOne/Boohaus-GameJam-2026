@@ -6,6 +6,7 @@ public class UI_ItemSlot : MonoBehaviour, IDropHandler
 {
 
     public UnityEvent<ItemType> OnItemEquip;
+    [SerializeField] ParticleSystem[] particles;
 
     // snap anything dropped on this slot
     public void OnDrop(PointerEventData eventData)
@@ -16,6 +17,8 @@ public class UI_ItemSlot : MonoBehaviour, IDropHandler
             // itemRect.position =  GetComponent<RectTransform>().position;
             UI_DragDrop item = eventData.pointerDrag.GetComponent<UI_DragDrop>();
             OnItemEquip.Invoke(item.itemType);
+
+            Instantiate(particles[Random.Range(0, particles.Length)], transform.position, Quaternion.identity);
         }
     }
 }
