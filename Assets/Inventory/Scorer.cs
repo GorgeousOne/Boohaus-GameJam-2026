@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using Yarn.Unity;
 
 public class Scorer : MonoBehaviour
 {
@@ -45,7 +46,9 @@ public class Scorer : MonoBehaviour
 
     public void StartScoring()
     {
-        Debug.Log("lets go!");
+        DialogueRunner runner = GameObject.FindWithTag("Yarn").GetComponent<DialogueRunner>();
+        runner.StartDialogue("Chat1");
+
 
         front.SetActive(true);
         back.SetActive(true);

@@ -4,9 +4,9 @@ using UnityEngine;
 public class ButtonSceneChange : MonoBehaviour
 {
 
-    public void ChangeScene(string sceneName)
+    public void ChangeSceneWithUnload(string sceneName)
     {
         // GameManager.Instance.ChangeLevel(sceneName);
-        GameManager.Instance.LoadScene(sceneName);
+        GameManager.Instance.ChangeLevel(sceneName);
     }
 }
