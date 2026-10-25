@@ -26,6 +26,8 @@ public class UI_Inventory : MonoBehaviour
     Dictionary<BodyPart, List<UI_ItemSpawn>> slotLists = new();
     List<UI_ItemSpawn> currentSlots = new();
 
+    public AudioSource clicksound;
+
 
     void Awake()
     {
@@ -56,12 +58,13 @@ public class UI_Inventory : MonoBehaviour
         {
             spawnItems(items);
         }
-        // ShowTab(BodyPart.HAT);
+        ShowTab(BodyPart.HAT);
     }
 
     void onSwitchView(BodyPart bodyPart)
     {
         ShowTab(bodyPart);
+        clicksound.Play();
     }
 
     void clearEquipped()
