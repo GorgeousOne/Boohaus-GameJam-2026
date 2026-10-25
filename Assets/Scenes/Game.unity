@@ -1946,8 +1946,20 @@ PrefabInstance:
       value: Start
       objectReference: {fileID: 0}
     - target: {fileID: 5753887390424212647, guid: 2b37a94a1dda96546b406dd20c133c50, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b9b52261bed864e4b8ee1766cecba2b8, type: 2}
+    - target: {fileID: 5753887390424212647, guid: 2b37a94a1dda96546b406dd20c133c50, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7246874498410138414, guid: b9b52261bed864e4b8ee1766cecba2b8, type: 2}
+    - target: {fileID: 5753887390424212647, guid: 2b37a94a1dda96546b406dd20c133c50, type: 3}
       propertyPath: m_TextWrappingMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753887390424212647, guid: 2b37a94a1dda96546b406dd20c133c50, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
