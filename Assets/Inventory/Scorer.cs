@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Scorer : MonoBehaviour
 {
@@ -18,16 +17,17 @@ public class Scorer : MonoBehaviour
     public float animDuration;
     public Vector2 animDist;
 
+    public ParticleSystem bonbons;
 
+
+    int score;
 
     float animStart = -999;
     Vector2 animStartPoint;
 
     void Awake()
     {
-
         character = GameObject.Find("Costume View").GetComponent<RectTransform>();
-        Debug.Log("we good? " + front + back + character);
     }
 
     public void StartScoring()
@@ -41,10 +41,23 @@ public class Scorer : MonoBehaviour
         animStartPoint = character.anchoredPosition;
 
 
-        counter.text = "42";
-
         var audios = GetComponents<AudioSource>();
         audios[1].PlayOneShot(stoneStatue);
+
+        int[] scoreOptions = new int[3];
+        scoreOptions[0] = Random.Range(10, 30);
+        scoreOptions[1] = Random.Range(80, 150);
+        scoreOptions[2] = Random.Range(300, 350);
+        score = scoreOptions[Random.Range(0, scoreOptions.Length)];
+        counter.text = "" + score;
+
+        Debug.Log("shoot");
+        ParticleSystem.MainModule psMain = bonbons.main;
+        ParticleSystem.EmissionModule psEMission = bonbons.emission;
+        int scale = (int) Mathf.Ceil(Mathf.Log(score));
+        psMain.duration = scale;
+        psEMission.rateOverTime = 10 + scale * 10;
+        bonbons.Play();
     }
 
     void Update()
