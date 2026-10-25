@@ -17,13 +17,13 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
 
     [SerializeField] public ItemType itemType;
 
-    bool isEquipped;
+    // bool isEquipped;
     Image sprite;
 
-    public void SetEquipped(bool value) {
-        isEquipped = value;
-        sprite.color = value ? new Color(0.51f, 0.20f, 0.92f) : Color.white;
-    }
+    // public void SetEquipped(bool value) {
+    //     isEquipped = value;
+    //     sprite.color = value ? new Color(0.51f, 0.20f, 0.92f) : Color.white;
+    // }
 
 
     void Awake()
@@ -53,10 +53,10 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
     //move item by mouse move drag movement
     public void OnDrag(PointerEventData eventData)
     {
-        if (isEquipped)
-        {
-            return;
-        }
+        // if (isEquipped)
+        // {
+        //     return;
+        // }
         //canvas in world space fucked the scale factor. hard coding it
         // Vector2 delta = eventData.delta * 1.9f; // / canvas.scaleFactor;
         // rectTransform.anchoredPosition += delta;

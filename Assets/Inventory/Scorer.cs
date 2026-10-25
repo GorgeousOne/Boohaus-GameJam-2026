@@ -10,12 +10,16 @@ public class Scorer : MonoBehaviour
     public GameObject uiback;
     public RectTransform character;
     public TextMeshProUGUI counter;
+    public GameObject counterWrapper;
 
 
     public float animDuration;
     public Vector2 animDist;
 
     public ParticleSystem bonbons;
+
+    public GameObject continueBtn;
+
 
 
     bool startedBonbons;
@@ -26,19 +30,27 @@ public class Scorer : MonoBehaviour
     float bonbonStart = 99999;
     Vector2 animStartPoint;
     float bonbonDuration;
+    bool showedContinue;
 
     void Awake()
     {
         character = GameObject.Find("Costume View").GetComponent<RectTransform>();
+
+        front.SetActive(false);
+        back.SetActive(false);
+        continueBtn.SetActive(false);
     }
 
     public void StartScoring()
     {
         Debug.Log("lets go!");
+
         front.SetActive(true);
         back.SetActive(true);
         uifront.SetActive(false);
         uiback.SetActive(false);
+        counterWrapper.SetActive(false);
+
         animStart = Time.time;
         animStartPoint = character.anchoredPosition;
         bonbonStart = animStart + animDuration + 2;
@@ -54,10 +66,11 @@ public class Scorer : MonoBehaviour
         scoreOptions[2] = Random.Range(300, 350);
         score = scoreOptions[Random.Range(0, scoreOptions.Length)];
         Debug.Log("release the bonbons");
+
         ParticleSystem.MainModule psMain = bonbons.main;
         ParticleSystem.EmissionModule psEMission = bonbons.emission;
         bonbonDuration = (int) Mathf.Ceil(Mathf.Log(score));
-        psMain.duration = bonbonDuration;
+        psMain.duration = bonbonDuration - 1;
         psEMission.rateOverTime = 10 + bonbonDuration * 10;
     }
 
@@ -83,11 +96,18 @@ public class Scorer : MonoBehaviour
             int textScore = (int) Mathf.Ceil(t * score);
             counter.text = "" + textScore;
         }
+
+        if (time > bonbonStart + bonbonDuration && !showedContinue)
+        {
+            showedContinue = true;
+            continueBtn.SetActive(true);
+        }
     }
 
     void StartBonbons()
     {
         startedBonbons = true;
         bonbons.Play();
+        counterWrapper.SetActive(true);
     }
 }

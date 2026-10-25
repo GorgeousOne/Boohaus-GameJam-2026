@@ -145,16 +145,14 @@ public class UI_Inventory : MonoBehaviour
 
     public void OnItemEquip(ItemType item)
     {
-        Debug.Log("equpi " + item.bodyPart);
         ItemType oldItem = equippedItems.GetValueOrDefault(item.bodyPart, null);
 
-        if (oldItem) {
-            UI_ItemSpawn slot = getSlotByItem(oldItem);
-            slot.currentItem.SetEquipped(false);
-            // slot.setgrayout false
-        }
+        // if (oldItem) {
+        //     UI_ItemSpawn slot = getSlotByItem(oldItem);
+        //     slot.currentItem.SetEquipped(false);
+        // }
 
-        getSlotByItem(item).currentItem.SetEquipped(true);
+        // getSlotByItem(item).currentItem.SetEquipped(true);
         costumeSprites[item.bodyPart].sprite = item.fullImg;
         costumeSprites[item.bodyPart].color = Color.white;
     }
