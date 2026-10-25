@@ -29,10 +29,10 @@ public class UI_Inventory : MonoBehaviour
 
     void Awake()
     {
-        slotContainer = transform.Find("Slot Container");
-        tabContainer = transform.Find("Tab Bar");
-        costumeView = transform.Find("Costume View");
-        equipper = costumeView.Find("Equip Slot").GetComponent<UI_ItemSlot>();
+        slotContainer = GameObject.Find("Slot Container").transform;
+        tabContainer = GameObject.Find("Tab Bar").transform;
+        costumeView = GameObject.Find("Costume View").transform;
+        equipper = GameObject.Find("Equip Slot").GetComponent<UI_ItemSlot>();
 
         equipper.OnItemEquip.AddListener(OnItemEquip);
         costumeSprites.Add(BodyPart.PANTS, costumeView.Find("Pants").GetComponent<Image>());
@@ -60,7 +60,6 @@ public class UI_Inventory : MonoBehaviour
 
     void onSwitchView(BodyPart bodyPart)
     {
-        Debug.Log("switch to " + bodyPart);
         ShowTab(bodyPart);
     }
 

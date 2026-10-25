@@ -10,6 +10,7 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
     private CanvasGroup canvasGroup;
 
     public UnityEvent OnDropEvent;
+    Canvas canvas;
 
     private bool checkIfEquippedNextFrame;
 
@@ -28,7 +29,7 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
-        // canvas = GetComponentInParent<Canvas>();
+        canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
         sprite = GetComponent<Image>();
     }
@@ -57,8 +58,14 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
             return;
         }
         //canvas in world space fucked the scale factor. hard coding it
-        Vector2 delta = eventData.delta * 1.9f; // / canvas.scaleFactor;
-        rectTransform.anchoredPosition += delta;
+        // Vector2 delta = eventData.delta * 1.9f; // / canvas.scaleFactor;
+        // rectTransform.anchoredPosition += delta;
+
+        Vector2 pos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, eventData.position, Camera.main, out pos);
+        var calcPos = canvas.transform.TransformPoint(pos);
+        transform.position = calcPos;
+        // rectTransform.anchoredPosition = calcPos;
     }
 
     public void OnEndDrag(PointerEventData eventData)
