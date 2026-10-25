@@ -160,4 +160,14 @@ public class UI_Inventory : MonoBehaviour
         costumeSprites[item.bodyPart].sprite = item.fullImg;
         costumeSprites[item.bodyPart].color = Color.white;
     }
+
+    public void ClearOutfit()
+    {
+        foreach(Image image in costumeSprites.Values)
+        {
+            image.sprite = null;
+            image.color = new Color(0, 0, 0, 0);
+
+        }
+    }
 }
