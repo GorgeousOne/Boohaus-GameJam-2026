@@ -16,12 +16,14 @@ public class UiManager : MonoBehaviour
 		Instance ??= this;
 		startScreen.gameObject.SetActive(true);
 		pauseScreen.gameObject.SetActive(false);
-	}
+		isGamePaused = false;
+    }
 
 	public void HideStartScreen()
 	{
 		startScreen.gameObject.SetActive(false);
-	}
+        InputManager.PlayerInput.SwitchCurrentActionMap("Player");
+    }
 
 	public void ShowMainMenu()
 	{
@@ -56,5 +58,10 @@ public class UiManager : MonoBehaviour
 		Time.timeScale = 1;
 		pauseScreen.gameObject.SetActive(false);
 		InputManager.PlayerInput.SwitchCurrentActionMap("Player");
+	}
+
+	public void ExitGame()
+	{
+		Application.Quit();
 	}
 }
