@@ -205,6 +205,17 @@
                 },
                 {
                     "name": "",
+                    "id": "e94258df-5abb-4ca8-a03b-8310a4adba22",
+                    "path": "<Touchscreen>/touch*/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1261a51a-067a-494d-a087-0d769d169916",
                     "path": "<Keyboard>/escape",
                     "interactions": "",

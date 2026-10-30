@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b219d928ed085884aa65a079c363a000
+guid: b0231b960f1c77346983bb53566696e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2204772883343771729
-    second: gesicht_edward_0
+      213: 7207129201758694737
+    second: shirt_edward_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,9 +46,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gesicht_edward_0
+      name: shirt_edward_0
       rect:
         serializedVersion: 2
-        x: 153
-        y: 733
-        width: 179
-        height: 172
+        x: 29
+        y: 313
+        width: 428
+        height: 442
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1588e1a814de89e10800000000000000
-      internalID: 2204772883343771729
+      spriteID: 15deb21f2ddd40460800000000000000
+      internalID: 7207129201758694737
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gesicht_edward_0: 2204772883343771729
+      shirt_edward_0: 7207129201758694737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

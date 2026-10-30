@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 52f8a3e861a1eb84aa09ee12380ab372
+guid: b219d928ed085884aa65a079c363a000
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8972335873177831139
-    second: hose_edward_0
+      213: 2204772883343771729
+    second: gesicht_edward_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,9 +46,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hose_edward_0
+      name: gesicht_edward_0
       rect:
         serializedVersion: 2
-        x: 151
-        y: 16
-        width: 167
-        height: 557
+        x: 153
+        y: 733
+        width: 179
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d19bdb19f0cdb7380800000000000000
-      internalID: -8972335873177831139
+      spriteID: 1588e1a814de89e10800000000000000
+      internalID: 2204772883343771729
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hose_edward_0: -8972335873177831139
+      gesicht_edward_0: 2204772883343771729
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
