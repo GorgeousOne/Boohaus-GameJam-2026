@@ -37,7 +37,7 @@ public class UI_DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBe
     public void setItem(ItemType item)
     {
         itemType = item;
-        sprite.sprite = itemType.fullImg;
+        sprite.sprite = itemType.menuImg; //set menu item for menu before moving
     }
 
     public void OnPointerDown(PointerEventData eventData)
