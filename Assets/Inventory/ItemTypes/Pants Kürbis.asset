@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f157d1307e4f0eb4bb10d9198896b39e, type: 3}
   m_Name: "Pants K\xFCrbis"
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
-  part: 3
+  bodyPart: 3
   fullImg: {fileID: 21300000, guid: bbf1b57cb1e5424458f61c44d006ab47, type: 3}
+  menuImg: {fileID: 21300000, guid: ac69b7113237c0045bec32d41a378e8c, type: 3}
   tags: 

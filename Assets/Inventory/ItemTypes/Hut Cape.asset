@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f157d1307e4f0eb4bb10d9198896b39e, type: 3}
   m_Name: Hut Cape
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
-  part: 0
+  bodyPart: 0
   fullImg: {fileID: 21300000, guid: 9b8123d58c6ee7a48b8171fee7703be3, type: 3}
+  menuImg: {fileID: 21300000, guid: 7b807546afed50444a4a8351782cf133, type: 3}
   tags: 

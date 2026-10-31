@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4a62fd0a0acfdcf46a12cca7fc4fac67
+guid: 7d8d6d6f0c924664aab4cf411d51d6e8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8171036557645567872
-    second: haare_default_0
+      213: 4213195599553870178
+    second: "hut_k\xFCrbis_cropped_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: haare_default_0
+      name: "hut_k\xFCrbis_cropped_0"
       rect:
         serializedVersion: 2
-        x: 168
-        y: 745
-        width: 139
-        height: 142
+        x: 10
+        y: 29
+        width: 154
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0882ec6fa85aa9e80800000000000000
-      internalID: -8171036557645567872
+      spriteID: 269b5a84317487a30800000000000000
+      internalID: 4213195599553870178
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      haare_default_0: -8171036557645567872
+      "hut_k\xFCrbis_cropped_0": 4213195599553870178
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f157d1307e4f0eb4bb10d9198896b39e, type: 3}
   m_Name: "Hut K\xFCrbis"
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
-  part: 0
+  bodyPart: 0
   fullImg: {fileID: 21300000, guid: cc4a7f0db1f99bb48ba1ba510b26949f, type: 3}
+  menuImg: {fileID: 21300000, guid: 7d8d6d6f0c924664aab4cf411d51d6e8, type: 3}
   tags: 

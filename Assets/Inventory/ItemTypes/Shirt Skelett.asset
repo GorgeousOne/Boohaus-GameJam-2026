@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f157d1307e4f0eb4bb10d9198896b39e, type: 3}
   m_Name: Shirt Skelett
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
-  part: 2
+  bodyPart: 2
   fullImg: {fileID: 21300000, guid: 8a9f8edad68f6e3479c47cfbea6fbc6a, type: 3}
+  menuImg: {fileID: 21300000, guid: 14f8e53d215fd9046b5d7d7720a4c8d6, type: 3}
   tags: 

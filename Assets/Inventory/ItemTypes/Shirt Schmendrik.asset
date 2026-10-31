@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
   bodyPart: 2
   fullImg: {fileID: 21300000, guid: e7c63e195e860c64f90f8b4f666a44a9, type: 3}
+  menuImg: {fileID: 21300000, guid: fee17c0354e95ac47848aad57d36b62e, type: 3}
   tags: 

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f157d1307e4f0eb4bb10d9198896b39e, type: 3}
   m_Name: Face Skelett
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
-  part: 1
+  bodyPart: 1
   fullImg: {fileID: 21300000, guid: 05976a90e05028144afe206a98d7c20f, type: 3}
+  menuImg: {fileID: 21300000, guid: 8c85d9f855f3bd34694656addf1e9f8e, type: 3}
   tags: 

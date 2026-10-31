@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f157d1307e4f0eb4bb10d9198896b39e, type: 3}
   m_Name: Hut Skelett
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
-  part: 0
+  bodyPart: 0
   fullImg: {fileID: 21300000, guid: 238011af6141aec47ae05ede19ab3044, type: 3}
+  menuImg: {fileID: 21300000, guid: 9bb274db05f505f47a344ed4f7498dff, type: 3}
   tags: 

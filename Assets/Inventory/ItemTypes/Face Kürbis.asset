@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f157d1307e4f0eb4bb10d9198896b39e, type: 3}
   m_Name: "Face K\xFCrbis"
   m_EditorClassIdentifier: Assembly-CSharp::ItemType
-  part: 1
+  bodyPart: 1
   fullImg: {fileID: 21300000, guid: adcd0aaaed2b61a4ca7e458290507096, type: 3}
+  menuImg: {fileID: 21300000, guid: b62cfbf3b2a7e2c4992cfdf558943b90, type: 3}
   tags: 
